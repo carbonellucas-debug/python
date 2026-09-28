@@ -1,0 +1,20 @@
+# Entrada de dados: solicita o valor da compra ao usuario
+valor_compra = float(input("Digite o valor total da compra (R$): "))
+
+# Estrutura de decisão para determinar o percentual de desconto
+if valor_compra < 200.00:
+    percentual_desconto = 5
+elif valor_compra < 300.00:
+    percentual_desconto = 10
+else:
+    percentual_desconto = 15
+
+# Cálculo do valor do desconto e do valor final a pagar
+valor_desconto = valor_compra * (percentual_desconto / 100)
+valor_final = valor_compra - valor_desconto
+
+# Exibição dos resultados formatados com duas casas decimais
+print("\n--- RESUMO DA COMPRA ---")
+print(f"Valor original: R$ {valor_compra:.2f}")
+print(f"Desconto aplicado ({percentual_desconto}%): R$ {valor_desconto:.2f}")
+print(f"Valor final a pagar: R$ {valor_final:.2f}")
